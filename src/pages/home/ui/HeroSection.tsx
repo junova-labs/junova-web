@@ -7,50 +7,50 @@ import { Container, JunovaConstruct } from '@shared/ui'
 
 export function HeroSection() {
   return (
-    <section className="flex min-h-[calc(100svh-4.5rem)] items-center bg-chalk py-14 sm:py-20 lg:py-24">
+    <section className="flex min-h-[calc(100svh-4.5rem)] items-center bg-chalk py-10 sm:py-14 lg:py-16">
       <Container>
-        <div className="grid items-center gap-14 lg:grid-cols-12 lg:gap-12">
+        <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-10">
           <motion.div
             variants={staggerContainerVariants}
             initial="hidden"
             animate="visible"
-            className="space-y-8 lg:col-span-6"
+            className="space-y-6 lg:col-span-6"
           >
             <motion.p
               variants={fadeUpVariants}
               className="text-xs font-semibold tracking-[0.2em] text-junova uppercase"
             >
-              {SITE_CONFIG.name} · Empresa tecnológica
+              {SITE_CONFIG.name} · Software y Productos Digitales
             </motion.p>
 
             <motion.h1
               variants={fadeUpVariants}
-              className="text-[clamp(2.5rem,5.4vw,4.5rem)] leading-[1.03] font-semibold tracking-tight text-carbon"
+              className="text-[clamp(2.25rem,4.4vw,3.75rem)] leading-[1.06] font-semibold tracking-tight text-carbon"
             >
-              Convertimos ideas en software y productos digitales.
+              Software que se adapta a tu empresa.
             </motion.h1>
 
             <motion.p
               variants={fadeUpVariants}
               className="max-w-lg text-base leading-relaxed text-graphite sm:text-lg"
             >
-              Desarrollamos software a medida, brindamos servicios tecnológicos y
-              creamos productos propios con enfoque claro, útil y duradero.
+              Adaptamos soluciones de nuestro catálogo a tu operación y creamos
+              software a medida cuando tu idea lo requiere.
             </motion.p>
 
             <motion.div
               variants={fadeUpVariants}
               className="flex flex-wrap items-center gap-6 pt-2"
             >
-              <Link to={ROUTES.CONTACT} className="btn btn-blue">
-                Hablemos de tu idea
+              <Link to={ROUTES.SERVICES} className="btn btn-blue">
+                Explorar servicios
                 <ArrowRight className="size-4" aria-hidden="true" />
               </Link>
               <Link
-                to={ROUTES.SERVICES}
+                to={ROUTES.PRODUCTS}
                 className="inline-flex items-center gap-2 border-b border-carbon pb-1 text-sm font-semibold text-carbon transition-colors hover:border-junova hover:text-junova"
               >
-                Ver servicios
+                Ver catálogo
               </Link>
             </motion.div>
           </motion.div>

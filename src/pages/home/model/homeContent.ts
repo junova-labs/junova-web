@@ -1,3 +1,4 @@
+import { ROUTES } from '@shared/config'
 import type { ConstructStage } from '@shared/ui'
 
 export interface PracticeLine {
@@ -17,27 +18,29 @@ export interface EcosystemPillar {
   label: string
   title: string
   description: string
+  ctaLabel: string
+  ctaTo: string
   tone: 'carbon' | 'blue'
 }
 
 export const PRACTICE_LINES: readonly PracticeLine[] = [
   {
     index: '01',
-    title: 'Desarrollo de software a medida',
+    title: 'Software de catálogo adaptable',
     description:
-      'Construimos aplicaciones web, sistemas internos y herramientas diseñadas alrededor de cómo trabaja realmente tu negocio.',
+      'Nuestra línea principal: plataformas ya diseñadas y probadas por JUNOVA que configuramos, integramos y adaptamos a la identidad y procesos de tu empresa.',
   },
   {
     index: '02',
-    title: 'Servicios tecnológicos',
+    title: 'Software a medida',
     description:
-      'Acompañamos decisiones de arquitectura, modernización de sistemas e integración técnica con criterio claro y ejecución directa.',
+      'Convertimos ideas nuevas o requerimientos operativos muy específicos en aplicaciones desarrolladas desde cero alrededor de tu negocio.',
   },
   {
     index: '03',
     title: 'Productos digitales propios',
     description:
-      'Desarrollamos nuestras propias soluciones digitales, aplicando la misma disciplina de ingeniería y diseño que ofrecemos a cada cliente.',
+      'Creamos y evolucionamos tecnología propia dentro de JUNOVA, fortaleciendo continuamente el catálogo de soluciones disponibles para nuestros clientes.',
   },
 ]
 
@@ -45,39 +48,43 @@ export const PROCESS_STAGES: readonly ProcessStage[] = [
   {
     index: '01',
     stage: 'structure',
-    title: 'Entender y ordenar',
+    title: 'Evaluar la mejor base',
     description:
-      'Traducimos una idea o necesidad concreta en una estructura clara antes de escribir la primera línea de código.',
+      'Analizamos tu operación para identificar qué solución de nuestro catálogo se ajusta mejor a tus objetivos o si conviene un desarrollo específico.',
   },
   {
     index: '02',
     stage: 'build',
-    title: 'Construir con criterio',
+    title: 'Adaptar y construir con precisión',
     description:
-      'Desarrollamos software limpio, comprensible y bien probado, con avances visibles y comunicación sin tecnicismos innecesarios.',
+      'Personalizamos flujos, reglas e integraciones para que tu equipo trabaje con una herramienta clara, rápida y alineada a su día a día.',
   },
   {
     index: '03',
     stage: 'evolve',
-    title: 'Evolucionar sin rehacer',
+    title: 'Evolucionar de forma continua',
     description:
-      'Entregamos bases preparadas para crecer, integrar nuevas funciones y adaptarse cuando el negocio lo necesite.',
+      'Acompañamos el crecimiento de tu empresa incorporando nuevos módulos y capacidades sin interrumpir tu operación.',
   },
 ]
 
 export const ECOSYSTEM_PILLARS: readonly EcosystemPillar[] = [
   {
-    label: 'Línea 01 · Trabajo con organizaciones',
-    title: 'Servicios y desarrollo',
+    label: 'Línea principal · Catálogo adaptable',
+    title: 'Soluciones JUNOVA adaptadas a tu empresa',
     description:
-      'Colaboramos con empresas, emprendedores y equipos técnicos para diseñar, construir y poner en marcha software que resuelve problemas reales.',
-    tone: 'carbon',
+      'Implementa tecnología probada y desarrollada por nuestro equipo, personalizada con tus procesos, reglas e identidad para generar impacto en menos tiempo.',
+    ctaLabel: 'Explorar productos',
+    ctaTo: ROUTES.PRODUCTS,
+    tone: 'blue',
   },
   {
-    label: 'Línea 02 · Creación interna',
-    title: 'Productos JUNOVA',
+    label: 'Línea complementaria · Desarrollo específico',
+    title: 'Software a medida desde cero',
     description:
-      'Un espacio dedicado a investigar, diseñar y lanzar herramientas digitales propias que amplían nuestra propuesta tecnológica más allá de los servicios.',
-    tone: 'blue',
+      'Cuando tienes una idea nueva o un proceso particular que requiere una arquitectura exclusiva, construimos cada pieza a la medida de tu proyecto.',
+    ctaLabel: 'Ver servicios',
+    ctaTo: ROUTES.SERVICES,
+    tone: 'carbon',
   },
 ]

@@ -1,3 +1,15 @@
+import { ServiceComparisonSection } from './ServiceComparisonSection'
+import { ServiceModelsSection } from './ServiceModelsSection'
+import { ServicesCtaSection } from './ServicesCtaSection'
+import { ServicesHero } from './ServicesHero'
+
 export function ServicesPage() {
-  return <section className="section-band" />
+  return (
+    <>
+      <ServicesHero />
+      <ServiceModelsSection />
+      <ServiceComparisonSection />
+      <ServicesCtaSection />
+    </>
+  )
 }
