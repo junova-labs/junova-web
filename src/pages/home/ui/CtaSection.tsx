@@ -10,15 +10,15 @@ export function CtaSection() {
         <Reveal className="grid gap-10 border-l-4 border-junova pl-6 sm:pl-10 lg:grid-cols-12 lg:items-end">
           <div className="space-y-4 lg:col-span-7">
             <p className="text-xs font-semibold tracking-[0.2em] text-lightblue uppercase">
-              Contacto
+              Siguiente paso
             </p>
             <h2 className="text-3xl leading-[1.1] font-semibold tracking-tight text-chalk sm:text-4xl lg:text-[2.75rem]">
-              ¿Tienes una idea o un reto técnico en mente?
+              ¿Adaptamos una solución de nuestro catálogo o construimos desde cero?
             </h2>
             <p className="max-w-xl text-base leading-relaxed text-neutral">
-              Conversemos de forma directa. Te escuchamos, entendemos el contexto y
-              exploramos si {SITE_CONFIG.name} es el equipo adecuado para
-              construirlo.
+              Cuéntanos qué necesita tu empresa. En una conversación directa te
+              mostramos cómo adaptar nuestras plataformas o diseñar una solución
+              específica para tu equipo.
             </p>
           </div>
 

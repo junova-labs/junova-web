@@ -13,12 +13,12 @@ export function ApproachSection() {
               Cómo trabajamos
             </p>
             <h2 className="text-3xl leading-[1.1] font-semibold tracking-tight text-chalk sm:text-4xl lg:text-[2.75rem]">
-              De una idea abierta a una solución tangible.
+              Un proceso claro para pasar de la idea al resultado.
             </h2>
           </div>
           <p className="text-base leading-relaxed text-neutral lg:col-span-5">
-            Creemos en procesos claros que cualquier persona pueda entender y que
-            cualquier equipo técnico pueda respaldar.
+            Sin promesas infladas ni tecnicismos innecesarios: decisiones claras
+            que entiende tu equipo de negocio y respalda tu equipo técnico.
           </p>
         </Reveal>
 
