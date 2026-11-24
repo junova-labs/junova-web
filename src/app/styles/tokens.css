@@ -1,0 +1,24 @@
+/* ==========================================================================
+   JUNOVA — Identidad cromática y tipográfica
+   ========================================================================== */
+
+:root {
+  --junova-carbon: #101010;
+  --junova-blue: #194bdb;
+  --junova-light-blue: #789bff;
+  --junova-chalk: #f3f2ef;
+  --junova-graphite: #242424;
+  --junova-neutral: #a3a3a3;
+}
+
+@theme inline {
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --color-carbon: var(--junova-carbon);
+  --color-junova: var(--junova-blue);
+  --color-lightblue: var(--junova-light-blue);
+  --color-chalk: var(--junova-chalk);
+  --color-graphite: var(--junova-graphite);
+  --color-neutral: var(--junova-neutral);
+}

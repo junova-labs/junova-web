@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@import "./tokens.css";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+  }
+
+  body {
+    @apply bg-chalk text-carbon antialiased selection:bg-junova selection:text-chalk;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer components {
+  .layout-container {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
+  }
+
+  .section-band {
+    @apply scroll-mt-18 py-20 sm:py-28 lg:py-36;
+  }
+
+  .nav-link-light {
+    @apply text-sm font-medium text-graphite transition-colors duration-200 hover:text-junova;
+  }
+
+  .nav-link-dark {
+    @apply text-sm font-medium text-neutral transition-colors duration-200 hover:text-chalk;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2.5 px-6 py-3 text-sm font-semibold tracking-tight transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-junova;
+  }
+
+  .btn-blue {
+    @apply bg-junova text-chalk hover:bg-carbon;
+  }
+
+  .btn-carbon {
+    @apply bg-carbon text-chalk hover:bg-junova;
+  }
+
+  .btn-chalk {
+    @apply bg-chalk text-carbon hover:bg-lightblue hover:text-carbon;
+  }
+
+  .btn-outline-dark {
+    @apply border border-graphite bg-transparent text-chalk hover:border-chalk;
+  }
+
+  .btn-outline-light {
+    @apply border border-carbon/25 bg-transparent text-carbon hover:border-carbon hover:bg-carbon hover:text-chalk;
+  }
+}

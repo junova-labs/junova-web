@@ -1,0 +1,47 @@
+version: 2
+
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    target-branch: "develop"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "America/Lima"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore(deps)"
+    labels:
+      - "dependencies"
+    groups:
+      react-core:
+        patterns:
+          - "react"
+          - "react-dom"
+          - "react-router"
+          - "@types/react"
+          - "@types/react-dom"
+      ui-and-styling:
+        patterns:
+          - "tailwindcss"
+          - "@tailwindcss/*"
+          - "motion"
+          - "lucide-react"
+          - "simple-icons"
+      build-and-tooling:
+        patterns:
+          - "vite"
+          - "@vitejs/*"
+          - "@rolldown/*"
+          - "@babel/*"
+          - "babel-plugin-react-compiler"
+          - "typescript"
+          - "oxlint"
+          - "husky"
+          - "@types/node"
+          - "@types/babel__*"
+      minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"

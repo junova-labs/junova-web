@@ -1,0 +1,22 @@
+# <tipo>(<alcance opcional>): <descripción breve en imperativo, máx. 72 caracteres>
+#
+# Ejemplo:
+# feat(navbar): agregar botón de contacto por WhatsApp
+# fix(router): corregir redirección en ruta raíz
+#
+# Tipos permitidos:
+#   feat     -> Nueva funcionalidad
+#   fix      -> Corrección de un error
+#   refactor -> Cambio de código que no corrige un bug ni agrega funcionalidad
+#   style    -> Cambios visuales o de formato que no afectan la lógica
+#   docs     -> Documentación
+#   perf     -> Mejora de rendimiento
+#   test     -> Pruebas
+#   build    -> Cambios en el sistema de build o dependencias
+#   ci       -> Cambios en integración continua o automatizaciones
+#   chore    -> Tareas de mantenimiento
+#   revert   -> Reversión de un commit anterior
+#
+# Cuerpo (opcional): explica el qué y el porqué del cambio, no el cómo.
+#
+# Pie (opcional): referencias a issues (ej. Closes #12) o BREAKING CHANGE.
