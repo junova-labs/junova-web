@@ -29,22 +29,24 @@ export function Footer() {
                 {section.title}
               </h3>
               <ul className="space-y-2.5">
-                {section.links.map((item) => {
-                  const isExternal = item.to.startsWith('http')
-
-                  return (
-                    <li key={`${section.title}-${item.label}`}>
+                {section.links.map((item) => (
+                  <li key={`${section.title}-${item.label}`}>
+                    {item.external ? (
                       <a
                         href={item.to}
-                        target={isExternal ? '_blank' : undefined}
-                        rel={isExternal ? 'noopener noreferrer' : undefined}
+                        target={item.to.startsWith('http') ? '_blank' : undefined}
+                        rel={item.to.startsWith('http') ? 'noopener noreferrer' : undefined}
                         className="nav-link-dark text-sm"
                       >
                         {item.label}
                       </a>
-                    </li>
-                  )
-                })}
+                    ) : (
+                      <Link to={item.to} className="nav-link-dark text-sm">
+                        {item.label}
+                      </Link>
+                    )}
+                  </li>
+                ))}
               </ul>
             </div>
           ))}

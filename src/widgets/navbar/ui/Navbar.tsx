@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router'
+import { Link, useLocation } from 'react-router'
 import { Menu, X } from 'lucide-react'
 import { AnimatePresence, motion } from 'motion/react'
 import { siWhatsapp } from 'simple-icons'
@@ -9,6 +9,7 @@ import { BrandIcon, Container } from '@shared/ui'
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { pathname } = useLocation()
 
   const closeMenu = () => setIsMenuOpen(false)
 
@@ -23,12 +24,25 @@ export function Navbar() {
           {SITE_CONFIG.name}
         </Link>
 
-        <nav aria-label="Navegación principal" className="hidden items-center gap-9 md:flex">
-          {NAV_ITEMS.map((item) => (
-            <a key={item.to} href={item.to} className="nav-link-light">
-              {item.label}
-            </a>
-          ))}
+        <nav aria-label="Navegación principal" className="hidden items-center gap-8 md:flex">
+          {NAV_ITEMS.map((item) => {
+            const isActive = pathname === item.to
+
+            return (
+              <Link
+                key={item.to}
+                to={item.to}
+                aria-current={isActive ? 'page' : undefined}
+                className={
+                  isActive
+                    ? 'nav-link-light text-junova'
+                    : 'nav-link-light'
+                }
+              >
+                {item.label}
+              </Link>
+            )
+          })}
         </nav>
 
         <div className="hidden items-center md:flex">
@@ -68,16 +82,25 @@ export function Navbar() {
             className="overflow-hidden border-t border-carbon/12 bg-chalk md:hidden"
           >
             <Container className="flex flex-col gap-4 py-6">
-              {NAV_ITEMS.map((item) => (
-                <a
-                  key={item.to}
-                  href={item.to}
-                  onClick={closeMenu}
-                  className="nav-link-light text-base"
-                >
-                  {item.label}
-                </a>
-              ))}
+              {NAV_ITEMS.map((item) => {
+                const isActive = pathname === item.to
+
+                return (
+                  <Link
+                    key={item.to}
+                    to={item.to}
+                    onClick={closeMenu}
+                    aria-current={isActive ? 'page' : undefined}
+                    className={
+                      isActive
+                        ? 'nav-link-light text-base text-junova'
+                        : 'nav-link-light text-base'
+                    }
+                  >
+                    {item.label}
+                  </Link>
+                )
+              })}
               <a
                 href={SITE_CONFIG.whatsappUrl}
                 target="_blank"

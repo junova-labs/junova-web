@@ -1,5 +1,6 @@
 import { ArrowRight } from 'lucide-react'
 import { motion } from 'motion/react'
+import { Link } from 'react-router'
 import { ROUTES, SITE_CONFIG } from '@shared/config'
 import { fadeUpVariants, staggerContainerVariants } from '@shared/lib'
 import { Container, JunovaConstruct } from '@shared/ui'
@@ -41,16 +42,16 @@ export function HeroSection() {
               variants={fadeUpVariants}
               className="flex flex-wrap items-center gap-6 pt-2"
             >
-              <a href={ROUTES.CONTACT} className="btn btn-blue">
+              <Link to={ROUTES.CONTACT} className="btn btn-blue">
                 Hablemos de tu idea
                 <ArrowRight className="size-4" aria-hidden="true" />
-              </a>
-              <a
-                href={ROUTES.WORK}
+              </Link>
+              <Link
+                to={ROUTES.SERVICES}
                 className="inline-flex items-center gap-2 border-b border-carbon pb-1 text-sm font-semibold text-carbon transition-colors hover:border-junova hover:text-junova"
               >
-                Ver qué hacemos
-              </a>
+                Ver servicios
+              </Link>
             </motion.div>
           </motion.div>
 

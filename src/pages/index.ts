@@ -1,1 +1,5 @@
 export { HomePage } from './home'
+export { ServicesPage } from './services'
+export { ProductsPage } from './products'
+export { AboutPage } from './about'
+export { ContactPage } from './contact'
